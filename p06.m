@@ -3,7 +3,7 @@
 % Grid, variable coefficient, and initial data:
   N = 128; h = 2*pi/N; x = h*(1:N); t = 0; dt = h/4;
   c = .2 + sin(x-1).^2;
-  v = exp(-100*(x-1).^2); vold = exp(-100*(x-.2*dt-1).^2);
+  v = exp(-100*(x-1).^2); vold = exp(-100*(x+.2*dt-1).^2);
 
 % Time-stepping by leap frog formula:
   tmax = 8; tplot = .15; clf, drawnow, set(gcf,'renderer','zbuffer')

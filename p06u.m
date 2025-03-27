@@ -5,7 +5,7 @@
   c = .2 + sin(x-1).^2;
   t = 0; dt = 1.9/N;
   v = exp(-100*(x-1).^2);
-  vold = exp(-100*(x-.2*dt-1).^2);
+  vold = exp(-100*(x+.2*dt-1).^2);
 
 % Time-stepping by leap frog formula:
   tmax = 8; tplot = .15; clf, set(gcf,'renderer','zbuffer')
